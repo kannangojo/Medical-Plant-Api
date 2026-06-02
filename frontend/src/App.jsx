@@ -171,7 +171,7 @@ function App() {
     setPlantStatus('Saving plant...')
 
     try {
-      const response = await fetch(`${API_URL}/plants/`, {
+      const response = await fetch(`${API_URL}/api/plants/`, {
         method: 'POST',
         headers: authHeaders(),
         body: JSON.stringify(payload),
@@ -206,7 +206,7 @@ function App() {
     setPlantStatus(`Deleting ${plant.name}...`)
 
     try {
-      const response = await fetch(`${API_URL}/plants/${plant.id}/`, {
+      const response = await fetch(`${API_URL}/api/plants/${plant.id}/`, {
         method: 'DELETE',
         headers: authHeaders(),
       })
@@ -232,7 +232,7 @@ function App() {
     setIsSending(true)
 
     try {
-      const response = await fetch(`${API_URL}/chatbot/`, {
+      const response = await fetch(`${API_URL}/api/chatbot/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
