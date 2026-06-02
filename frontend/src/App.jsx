@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import './App.css'
 
-const API_URL = 'https://medical-plant-api.onrender.com'
+const API_URL = 'https://medical-plant-api.onrender.com/api'
 
 const starterMessages = [
   {
@@ -118,7 +118,7 @@ function App() {
         : { username: form.username, password: form.password }
 
     try {
-      const response = await fetch(`${API_URL}/api/${mode}/`, {
+      const response = await fetch(`${API_URL}/${mode}/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -171,7 +171,7 @@ function App() {
     setPlantStatus('Saving plant...')
 
     try {
-      const response = await fetch(`${API_URL}/api/plants/`, {
+      const response = await fetch(`${API_URL}/plants/`, {
         method: 'POST',
         headers: authHeaders(),
         body: JSON.stringify(payload),
@@ -206,7 +206,7 @@ function App() {
     setPlantStatus(`Deleting ${plant.name}...`)
 
     try {
-      const response = await fetch(`${API_URL}/api/plants/${plant.id}/`, {
+      const response = await fetch(`${API_URL}/plants/${plant.id}/`, {
         method: 'DELETE',
         headers: authHeaders(),
       })
@@ -232,7 +232,7 @@ function App() {
     setIsSending(true)
 
     try {
-      const response = await fetch(`${API_URL}/api/chatbot/`, {
+      const response = await fetch(`${API_URL}/chatbot/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
