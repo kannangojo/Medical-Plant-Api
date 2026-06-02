@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import './App.css'
 
-const API_URL = 'http://127.0.0.1:8000/api'
+const API_URL = 'https://medical-plant-api.onrender.com'
 
 const starterMessages = [
   {
@@ -118,7 +118,7 @@ function App() {
         : { username: form.username, password: form.password }
 
     try {
-      const response = await fetch(`${API_URL}/${mode}/`, {
+      const response = await fetch(`${API_URL}/api/${mode}/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
