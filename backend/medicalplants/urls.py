@@ -20,7 +20,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('', RedirectView.as_view(
-    url='https://YOUR-PROJECT.vercel.app/',
+    url='https://medical-plant-api.vercel.app/',
     permanent=False
 )),
     path('admin/', admin.site.urls),
