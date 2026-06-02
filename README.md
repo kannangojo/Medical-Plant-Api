@@ -1,6 +1,6 @@
 # 🌿 Medicinal Plant Chatbot
 
-A full-stack web application built using **React.js**, **Django REST Framework**, and **PostgreSQL/SQLite** that allows users to register, log in, and interact with a medicinal plant chatbot. The chatbot provides information about medicinal plants such as Neem, Tulsi, Aloe Vera, Mint, and Turmeric.
+A full-stack web application built using **React.js**, **Django REST Framework**, and **SQLite** that allows users to register, log in, and interact with a medicinal plant chatbot. The chatbot provides information about medicinal plants such as Neem, Tulsi, Aloe Vera, Mint, and Turmeric.
 
 ## 📸 Project Preview
 
@@ -53,7 +53,7 @@ A full-stack web application built using **React.js**, **Django REST Framework**
 - Django REST Framework
 
 ### Database
-- PostgreSQL / SQLite
+- SQLite
 
 ### Tools
 - Git
