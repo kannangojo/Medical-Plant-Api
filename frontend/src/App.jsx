@@ -88,7 +88,8 @@ function App() {
       const response = await fetch(`${API_URL}/plants/`, {
         headers: authHeaders(),
       })
-      const data = await response.json()
+      const text = await response.text()
+       console.log(text)
 
       if (!response.ok) {
         throw new Error(data.detail || 'Could not load plants.')
